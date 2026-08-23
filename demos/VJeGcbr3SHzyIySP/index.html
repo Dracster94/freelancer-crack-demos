@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Visual Profile Creation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            font-size: 16px;
+            line-height: 20px;
+            color: #666;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="title">Warlo Elmedolan - Visual Profile Creation</h1>
+    <p class="content">Un'applicazione di assistenza virtuale per gestire logistica e scelta di fornitori.</p>
+    <div class="button-container">
+        <button class="button" id="get-started">Crea il Profilo Visivo</button>
+    </div>
+    <div class="demo-badge">
+        <span>DEMO — Proof of Concept</span>
+    </div>
+</div>
+
+<script>
+    document.getElementById("get-started").addEventListener("click", function() {
+        var nome = prompt("Inserisci il tuo nome:");
+        if (nome) {
+            var cognome = prompt("Inserisci il tuo cognome:");
+            if (cognome) {
+                var mail = prompt("Inserisci la tua email:");
+                if (mail) {
+                    document.getElementById("output").innerHTML = "Il tuo profilo visivo è stato creato!";
+                }
+            }
+        }
+    });
+
+    document.getElementById("get-started").addEventListener("mouseover", function() {
+        this.style.background = "#34a85a";
+    });
+
+    document.getElementById("get-started").addEventListener("mouseout", function() {
+        this.style.background = "#4CAF50";
+    });
+</script>
+
+<div id="output"></div>
+
+</body>
+</html>
