@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Ethiopian 3D Adventure Mobile Game - Demo</title>
+ <style>
+  body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   background-color: #f7f7f7;
+  }
+  
+  header {
+   background-color: #333;
+   color: #fff;
+   padding: 20px;
+   text-align: center;
+  }
+  
+  header h1 {
+   font-size: 24px;
+   margin-bottom: 10px;
+  }
+  
+  main {
+   max-width: 800px;
+   margin: auto;
+   padding: 20px;
+  }
+  
+  .container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+  }
+  
+  .badge {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   background-color: #333;
+   color: #fff;
+   padding: 5px 10px;
+   border-radius: 50%;
+  }
+ </style>
+</head>
+<body>
+ <header>
+  <h1>Ethiopian 3D Adventure Mobile Game - Demo</h1>
+ </header>
+ <main>
+  <div class="container">
+   <img src="ethiopia-map.jpg" alt="Mappa di Etiopia" style="width: 400px; height: auto;">
+   <p>Benvenuto nella demo di Ethiopian 3D Adventure Mobile Game!</p>
+   <button onclick="apriNuovoLevel()">Apri nuovo livello</button>
+   <form id="input-form">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome"><br><br>
+    <label for="arma">Arma:</label>
+    <select id="arma" name="arma">
+     <option value="pistola">Pistola</option>
+     <option value="fucile">Fucile</option>
+     <option value="spada">Spada</option>
+    </select><br><br>
+    <button onclick="inviaDati()">Invia dati</button>
+   </form>
+   <div id="risposta">
+    <p>Il tuo nome è: <span id="nome-risposta"></span></p>
+    <p>Hai selezionato l'arma: <span id="arma-risposta"></span></p>
+   </div>
+  </div>
+ </main>
+ <script>
+  function apriNuovoLevel() {
+   // code right here
+  }
+  
+  function inviaDati() {
+   var nome = document.getElementById("nome").value;
+   var arma = document.getElementById("arma").value;
+   document.getElementById("risposta").innerHTML = "Il tuo nome è: " + nome + "<br> Hai selezionato l'arma: " + arma;
+  }
+ </script>
+ <div class="badge">DEMO — Proof of Concept</div>
+</body>
+</html>
