@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Critical AI Chatbot Debug & Optimize</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .demo badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        
+        .button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .button:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Critical AI Chatbot Debug & Optimize</h1>
+        <p>Dimostrazione di un chatbot personalizzato con funzionalità di debug e ottimizzazione</p>
+        
+        <div class="logo">Critical AI Chatbot</div>
+        
+        <form id="debug-form">
+            <input type="text" id="error-input" placeholder="Inserisci un errore">
+            <button class="button" onclick="debugChatbot()">Debug</button>
+        </form>
+        
+        <div id="chatbot-console"></div>
+    </div>
+    
+    <script>
+        function debugChatbot() {
+            var errorInput = document.getElementById('error-input');
+            var chatConsole = document.getElementById('chatbot-console');
+            
+            var errors = [
+                'Errore 1: Non risposta',
+                'Errore 2: Risposta non corretta',
+                'Errore 3: Risposta troppo lunga'
+            ];
+            
+            if (errorInput.value) {
+                chatConsole.innerHTML += '<p>' + errorInput.value + '</p>';
+                chatConsole.innerHTML += '<p>Chatbot: Corrigendo errore...</p>';
+                
+                // Simulare il debug del chatbot
+                setTimeout(function() {
+                    chatConsole.innerHTML += '<p>Chatbot: Errore risolto!</p>';
+                }, 2000);
+            }
+        }
+    </script>
+    
+    <div class="demo badge" onclick="this.remove()">DEMO — Proof of Concept</div>
+    
+    <script>
+        function demoBadgeRemove() {
+            var badge = document.querySelector('.demo badge');
+            badge.style.display = 'none';
+        }
+        
+        window.onload = function() {
+            var badge = document.querySelector('.demo badge');
+            badge.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
