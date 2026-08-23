@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Replace Backgrounds With House Driveway</title>
+ <style>
+  body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   background-color: #f7f7f7;
+  }
+  
+  .container {
+   max-width: 800px;
+   margin: 40px auto;
+   padding: 20px;
+   background-color: #fff;
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .button {
+   background-color: #4CAF50;
+   color: #fff;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+  }
+  
+  .button:hover {
+   background-color: #3e8e41;
+  }
+  
+  .demo-badge {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   padding: 5px 10px;
+   border-radius: 50%;
+   background-color: #4CAF50;
+   color: #fff;
+  }
+ </style>
+</head>
+<body>
+ <div class="container">
+  <h1>Replace Backgrounds With House Driveway</h1>
+  <p>Crea backgrounds innovativi per i tuoi contenuti con questa tecnica semplice e efficace.</p>
+  
+  <form>
+   <label for="background-image">Scegli il background:</label>
+   <select id="background-image" name="background-image">
+    <option value="#f7f7f7">Terra grigia</option>
+    <option value="#964B00">Terra rossa</option>
+    <option value="#66CCFF">Cielo azzurro</option>
+   </select>
+  
+   <button class="button" onclick=" cambioBackground()">Cambia background</button>
+  </form>
+  
+  <div id="background" style="background-image: url('img/terragrige.jpg');"></div>
+  
+  <div class="demo-badge">DEMO — Proof of Concept</div>
+ </div>
+
+ <script>
+  function cambioBackground() {
+   var backgroundImage = document.getElementById("background-image").value;
+   document.getElementById("background").style.backgroundImage = "url('img/" + backgroundImage + ".jpg')";
+  }
+ </script>
+</body>
+</html>
