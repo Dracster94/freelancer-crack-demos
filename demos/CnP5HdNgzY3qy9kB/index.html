@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Demo Fix & Deploy Recruitment Lead-Gen Tool</title>
+ <style>
+  body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   background-color: #f2f2f2;
+  }
+  .container {
+   max-width: 800px;
+   margin: auto;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .title {
+   font-size: 36px;
+   font-weight: bold;
+   margin-bottom: 10px;
+  }
+  .subtitle {
+   font-size: 24px;
+   margin-bottom: 20px;
+  }
+  .button {
+   background-color: #4CAF50;
+   color: #fff;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+  }
+  .button:hover {
+   background-color: #3e8e41;
+  }
+ </style>
+</head>
+<body>
+ <div class="container">
+  <h1 class="title">Fix & Deploy Recruitment Lead-Gen Tool</h1>
+  <p class="subtitle">Demo visiva e prototipo funzionante del progetto specifico</p>
+  <form id="lead-form">
+   <label for="name">Name:</label>
+   <input type="text" id="name" name="name"><br><br>
+   <label for="email">Email:</label>
+   <input type="email" id="email" name="email"><br><br>
+   <button class="button" onclick="submitForm()">Invia</button>
+  </form>
+  <p id="message"></p>
+  <div class="badge">
+   DEMO — Proof of Concept
+  </div>
+ </div>
+
+ <script>
+  function submitForm() {
+   var name = document.getElementById("name").value;
+   var email = document.getElementById("email").value;
+   var message = "Grazie, " + name + "! La tua richiesta è stata inviata a " + email + ".";
+   document.getElementById("message").innerHTML = message;
+  }
+
+  function interactButton() {
+   var button = document.querySelector(".button");
+   if (button.textContent === "Invia") {
+    button.textContent = "Invia (2)";
+    button.style.background = "#4CAF50";
+   } else {
+    button.textContent = "Invia";
+    button.style.background = "#3e8e41";
+   }
+  }
+
+  document.querySelectorAll(".button").forEach(button => {
+   button.addEventListener("click", interactButton);
+  });
+ </script>
+</body>
+</html>
